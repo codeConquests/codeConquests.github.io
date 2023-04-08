@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Martel+Sans:wght@900&family=Open+Sans&family=Poppins&family=Roboto&family=Ubuntu:wght@700&display=swap');
+
+/* thumbnails */
+.codeContainer img {
+  width: 100%
+}
+
+.codeContainer div {
+  font-family: 'Open Sans', sans-serif;
+  padding: 30px;
+  margin: 40px;
+  background: #202020;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px black;
+  transition: all 0.5s ease;
+}
+.codeContainer a {
+  display: inline-block;
+  background-color: #0437F2;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  right: 10px;
+  border: solid white 1px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.codeContainer div:hover {
+  animation: popOut 0.4s ease-in-out forwards;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.btnContainer {
+  padding: 15px;
+  background-color: #09005F;
+  border: solid white 1px;
+  border-radius: 2px;
+}
+
+.btnContainer button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  border-top-right-radius: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  box-shadow: 0.1px 0.1px 1px 0.1px white;
+}
+
+#codeConquest {
+  font-family: 'Fredoka', sans-serif;
+  background-color: transparent;
+  box-shadow: none;
+  color: lightskyblue;
+  font-size: 27px;
+  padding: 3px;
+  text-decoration-line: underline;
+}
