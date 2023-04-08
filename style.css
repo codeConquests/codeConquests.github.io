@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Martel+Sans:wght@900&family=Open+Sans&family=Poppins&family=Roboto&family=Ubuntu:wght@700&display=swap');
+
+@media (min-width: 769px) {
+  /* hiding everything in pc screen */
+  header{
+    display: none;
+  }
+  main {
+    display: none;
+  }
+  
+  footer {
+    display: none;
+  }
+  /* designing err page */
+ /* background animation */
+ .blobsErr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.blobsErr::before,
+.blobsErr::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.blobsErr::before {
+  background-color: #ff6384;
+  width: 200px;
+  height: 200px;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.blobsErr::after {
+  background-color: #36a2eb;
+  width: 150px;
+  height: 150px;
+  animation: float2 4s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(calc(-50% + 100px), -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* designing body of err page */
+body {
+  padding: 70px;
+   font-size: 1rem;
+    background: linear-gradient(to right, #000836, #000628);
+    color: white;
+}
+
+.errContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+}
+
+@media only screen and (max-width: 769px) {
+  /* removing err page contents from mobile screen */
+  .errContainer {
+    display: none;
+  }
+  .errSec{
+    display: none;
+  }
+  
+  /* background animation */
+.blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.blobs::before,
+.blobs::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.blobs::before {
+  background-color: #ff6384;
+  width: 200px;
+  height: 200px;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.blobs::after {
+  background-color: #36a2eb;
+  width: 150px;
+  height: 150px;
+  animation: float2 4s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(calc(-50% + 100px), -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+  
+body {
+    padding-top: 70px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #000836, #000628);
+    color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 100;
+  padding-left: 10px;
+}
+header.scrolled {
+  background-color: black;
+  transition: background-color 0.2s ease-in-out;
+}
+#hr {
+  position: relative;
+  bottom: 20px;
+  float: left;
+  width: 65%;
+}
+#bar {
+  font-size: 35px;
+  position: relative;
+  bottom: 55px;
+  left: 55px;
+}
+.codeConquest {
+  font-family: 'Fredoka', sans-serif;
+  color: lightskyblue;
+}
+#conquest {
+  font-size: 35px;
+}
+
+/*flip animation in header*/
+.waviy {
+  position: relative;
+}
+.waviy #fC {
+  position: relative;
+  display: inline-block;
+  animation: flip 60s infinite;
+  animation-delay: calc(.5s * var(--i))
+}
+.waviy #fC0 {
+  position: relative;
+  display: inline-block;
+  animation: flip0 50s infinite;
+  animation-delay: calc(.5s * var(--i))
+}
+.waviy #fC1 {
+  position: relative;
+  display: inline-block;
+  animation: flip1 30s infinite;
+  animation-delay: calc(.5s * var(--i))
+}
+.waviy #fC2 {
+  position: relative;
+  display: inline-block;
+  animation: flip2 10s infinite;
+  animation-delay: calc(.5s * var(--i))
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+@keyframes flip0 {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+@keyframes flip1 {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+@keyframes flip2 {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+/* section 1 welcome message */
+.sec1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icontainer {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 25px;
+  padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+  background: linear-gradient(to right, #6FC3B2, #88D498);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.linesContainer {
+  margin-top: -70px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 15px;
+  text-shadow: 1px 1px 1px black;
+}
+#yt{
+  text-decoration: none;
+  color: powderblue;
+}
+
+/* navigation bar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 15px;
+  right: 0;
+  background: linear-gradient(to right, #000628, #000836);
+  overflow-x: hidden;
+  transition: .5s;
+  padding-top: 60px;
+  border-radius: 10px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: grey;
+  
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* search bar */
+#search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -38px;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 10px;
+}
+
+#search-button {
+  padding: 13px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #3e8e41;
+} 
+
+/* setuing sections position */
+.sec {
+  position: relative;
+  bottom: 33px;
+}
+
+/* hybrid lines */
+.rhr {
+  width: 87%;
+  color: grey;
+  float: center;
+  position: relative;
+  bottom: 24px;
+}
+
+.tipContainer h1 {
+  font-family: 'Fredoka', sans-serif;
+  padding-left: 15px;
+  font-size: 30px;
+  background: linear-gradient(45deg, #6fc3b2, #88d498);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tipContainer p, dl {
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+  position: relative;
+  bottom: 25px;
+}
+
+.tipContainer h2{
+  position: relative;
+  bottom: 15px;
+}
+
+/* YouTube Tutorials section */
+#ytHead {
+  font-family: 'Fredoka', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #6fc3b2, #88d498);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 35px;
+}
+.ytContainer {
+  display: block;
+}
+
+}
