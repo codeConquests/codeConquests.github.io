@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aoi.js v6 series</title>
   <link rel="stylesheet" href="../../../style.css">
+  <link rel="stylesheet" href="../codeSec.css">
   <script src="https://kit.fontawesome.com/975b15b9ef.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,6 +28,67 @@
     <hr id="hr">
   </div>
   </header>
+  <main>
+     <section class="errSec">
+    <div class="blobsErr"></div>
+    <div class="errContainer">
+      <p>Hey there, this <b>Website</b> cannot be accessed through **Computer** or/and **Desktop** you can only visit this website with small screens as **Tablet, Smart Phones** etc. Please switch Tablet or Mobile to get access to the site, Thanks
+      </div>
+    </div>
+  </section>
+    <section>
+      <div class="hC">
+        <h1>Aoi.js V6 Codes</h1>
+        <dl>
+          <dt>Total Codes 2</dt>
+          <dd>Index Codes</dd>
+          <dd>Status Codes</dd>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <div class="cContainer">
+    <div>
+      <h1 id="cHead">Index Codes</h1>
+      <code id="indexCodes">
+      const aoijs = require('aoi.js')<br>
+      <br>
+const bot = new aoijs.AoiClient({<br>
+token: <span style="color: Red;">"token goes here"</span>,<br>
+prefix: <span style="color: Red;">"prefix goes here"</span>,<br>
+intents: ["MessageContent",<br> "GuildMessages","Guilds"<br>,"GuildMembers"],<br>
+events: ["onMessage",<br> "onInteractionCreate","onJoin"] })<br>
+<br>
+const loader = new aoijs.LoadCommands(bot)<br>
+
+loader.load(bot.cmd,"./commands/")<br>
+<br>
+bot.readyCommand({<br>
+channel: "",<br>
+code: `$log[Logged as in $userTag[$clientID]]`
+})  
+          </code>
+        </div>
+        <br>
+        <div>
+          <h1 id="cHead">Status Codes</h1>
+          <code id="statusCodes">
+ bot.status({<br>
+  text: <span style="color: Red;">"text goes here"</span>, <br>
+  type: "WATCHING",<br>
+  status: "online",<br>
+  time: "12"<br>
+  })
+ </code>
+        </div>
+      </div>
+    </section>
+      <section>
+    <div class="btnContainer">
+   <button onclick="history.back()">Go Back</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="codeConquest">codeConquest</a>
+   </div>
+  </section>
+  </main>
   
   <script src="../../../main.js"></script>
   <script src="../codeSec.js"></script>
