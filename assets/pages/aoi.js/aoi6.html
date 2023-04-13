@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aoi.js v6 series</title>
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="stylesheet" href="../codeSec.css">
+  <script src="https://kit.fontawesome.com/975b15b9ef.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+   <h1 class="codeConquest">
+     <div class="waviy">
+       <span id="fC" style="--i:1">c</span><span id="fC1" style="--i:2">o</span><span id="fC2" style="--i:3">d</span><span id="fC0" style="--i:4">e</span><span id="fC" style="--i:5">C</span><span id="fC1" style="--i:6">o</span><span id="fC2" style="--i:7">n</span><span id="fC0" style="--i:8">q</span><span id="fC2" style="--i:9">u</span><span id="fC1" style="--i:10">e</span><span id="fC0" style="--i:11">s</span><span style="--i:12">t</span>
+       </div>
+</h1>     <span onclick="openNav()" id="bar" class="fa fa-bars"></span> 
+<div id="Sidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../../../index.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+  <a href="../codeSec.html" ><i class="fa fa-code"></i>&nbsp;Codes</a>
+ <a href="https://youtube.com/channel/UC-yxnYNeZsNbHaN1Wr6iADQ" target="_blank"><i class="fa fa-youtube"></i>&nbsp;YouTube</a>
+  <a href="https://github.com/ViperVikxey" id="theme" target="_blank"><i class="fa fa-github"></i>&nbsp;GitHub</a>
+  <a href="https://www.paypal.me/Lomash274"><i class="fa-solid fa-circle-dollar-to-slot"></i>&nbsp;Donate</a>
+</div>
+    <hr id="hr">
+  </div>
+  </header>
+  <main>
+     <section class="errSec">
+    <div class="blobsErr"></div>
+    <div class="errContainer">
+      <p>Hey there, this <b>Website</b> cannot be accessed through **Computer** or/and **Desktop** you can only visit this website with small screens as **Tablet, Smart Phones** etc. Please switch Tablet or Mobile to get access to the site, Thanks
+      </div>
+    </div>
+  </section>
+    <section>
+      <div class="hC">
+        <h1>Aoi.js V6 Codes</h1>
+        <dl>
+          <dt>Total Codes 2</dt>
+          <dd>Index Codes</dd>
+          <dd>Status Codes</dd>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <div class="cContainer">
+    <div>
+      <h1 id="cHead">Index Codes</h1>
+      <code id="indexCodes">
+      const aoijs = require('aoi.js')<br>
+      <br>
+const bot = new aoijs.AoiClient({<br>
+token: <span style="color: Red;">"token goes here"</span>,<br>
+prefix: <span style="color: Red;">"prefix goes here"</span>,<br>
+intents: ["MessageContent",<br> "GuildMessages","Guilds"<br>,"GuildMembers"],<br>
+events: ["onMessage",<br> "onInteractionCreate","onJoin"] })<br>
+<br>
+const loader = new aoijs.LoadCommands(bot)<br>
+
+loader.load(bot.cmd,"./commands/")<br>
+<br>
+bot.readyCommand({<br>
+channel: "",<br>
+code: `$log[Logged as in $userTag[$clientID]]`
+})  
+          </code>
+        </div>
+        <br>
+        <div>
+          <h1 id="cHead">Status Codes</h1>
+          <code id="statusCodes">
+ bot.status({<br>
+  text: <span style="color: Red;">"text goes here"</span>, <br>
+  type: "WATCHING",<br>
+  status: "online",<br>
+  time: "12"<br>
+  })
+ </code>
+        </div>
+      </div>
+    </section>
+      <section>
+    <div class="btnContainer">
+   <button onclick="history.back()">Go Back</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="codeConquest">codeConquest</a>
+   </div>
+  </section>
+  </main>
+  
+  <script src="../../../main.js"></script>
+  <script src="../codeSec.js"></script>
+</body>
+
+</html>
