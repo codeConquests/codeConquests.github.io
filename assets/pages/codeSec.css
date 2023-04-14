@@ -81,7 +81,7 @@
 .cContainer div {
   background-color: #000419;
   padding: 20px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .cContainer h1 {
