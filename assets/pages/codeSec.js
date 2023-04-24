@@ -10,3 +10,7 @@ ddElements.forEach((ddElement) => {
     window.scrollTo({ top: offset, behavior: 'smooth' });
   });
 });
+
+// total codes count
+let codes = document.getElementsByTagName("code");
+document.getElementById("totalCodes").innerHTML = ("Total Codes " + codes.length)
