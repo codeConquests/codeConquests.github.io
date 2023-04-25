@@ -2,7 +2,9 @@
 
 /* thumbnails */
 .codeContainer img {
-  width: 100%
+  width: 100%;
+  border-radius: 5px;
+  border: solid white 3px;
 }
 
 .codeContainer div {
