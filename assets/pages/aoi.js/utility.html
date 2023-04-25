@@ -42,51 +42,38 @@
         <h1>Aoi.js v6 utility commands</h1>
         <dl>
           <dt id="totalCodes"></dt>
-          <dd><a href="#verificationCode">Verification Code</a></dd>
+          <dd><a href="#serverinfoCode">Server Info Code</a></dd>
           <div class="codeTip">Click on code names to redirect.</div>
         </dl>
       </div>
     </section>
-    <section>
+<section>
       <div class="cContainer">
     <div>
-      <h1 id="cHead">Verification Code</h1>
-     <code id="verificationCode">module.exports = [{<br>
-  name: "verify",<br>
-  code: `$title[1;Verification]<br>
-  $description[1;please verify yourself to get access to the server]<br>
-$addButton[1;get code;secondary;vCodeBtn;no]
-$addButton[1;verify;success;vBtn;no]`<br>
-<br>
-},{<br>
-  name: "vCodeBtn",<br>
-  type: "interaction",<br>
-  prototype: "button",<br>
-  code: `<br>
-$interactionReply[$getUserVar[vCod<br>;$authorID];;;;everyone;true]<br>
-$setUserVar[vCode;$randomString[6]]`<br>
-<br>
-},{<br>
-  name: "vBtn",<br>
-  type: "interaction",<br>
-  prototype: "button",<br>
-  code: `$interactionModal[Verification;vModal;<br>
-  {actionRow:<br>
-    {textInput:Enter the code you copied<br> below:1:vCodeInput:true::6:6}<br>
-  }]`<br>
-},{<br>
-  name: "vModal",<br>
-  type: "interaction",<br>
-  prototype: "modal",<br>
-  $if: "old",<br>
-  code: `<br>
-$if[$textInputValue[vCode]==$getUserVar[vCode;$authorID]]<br> $giveRoles[$guildID;$authorID;1054648122212630579]<br>
-$endif<br>
-$interactionReply[$replaceText[$replaceText[$checkCondition<br>[$textinputValue[vCodeInput]==$getUserVar[vCode;$authorID]]<br>;true;You've got verified ✅]<br>;false;Invalid code, please try again];;;;everyone;true]
-  `
+      <h1 id="cHead">Server Info Code</h1>
+     <code id="serverinfoCode">module.exports =  [{<br>
+  name: "serverinfo",<br>
+  aliases: ["server info", "server", "si"],<br>
+  code: `
+  $title[$guildName]<br>
+  $thumbnail[$guildIcon]<br>
+  $color[0987CF]<br>
+$description[$if[$guildDescription!=;$guildDescription;server has no description]]<br>
+$addField[Creation Date;&lt;t:$truncate[$math[$creationDate[$guildID;ms]/1000]]:D&gt; &lt;t:$truncate[$math[$creationDate[$guildID;ms]/1000]]:t&gt;;true]<br>
+$addField[Verification Level;$if[$guildVerificationLevel==0;none;]<br>
+$if[$guildVerificationLevel==1;low;]<br>
+$if[$guildVerificationLevel==2 medium;]<br>
+$if[$guildVerificationLevel==3;high;]<br>
+$if[$guildVerificationLevel==4;highest;];true]<br>
+$addField[Channel Count;$numberSeparator[$channelCount]]<br>
+$addField[Role Count;$numberSeparator[$roleCount];true]<br>
+$addField[Members Status;:green_circle: $numberSeparator[$membersCount[$guildID;online;false]]<br>  :black_circle: $numberSeparator[$membersCount[$guildID;offline;false]];true]<br>
+$addField[Owner;<@$ownerID> ($userTag[$ownerID])
+**ID -** $ownerID;true]`<br>
 }]</code>
 <br>
 <br>
+<center><button id="copyServerinfoCodeBtn">Copy Code</button></center>
         </div>
       </div>
     </section>
