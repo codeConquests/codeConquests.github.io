@@ -71,9 +71,27 @@ $addField[Members Status;:green_circle: $numberSeparator[$membersCount[$guildID;
 $addField[Owner;<@$ownerID> ($userTag[$ownerID])
 **ID -** $ownerID;true]`<br>
 }]</code>
-<br>
-<br>
         </div>
+        <div>
+          <h1 id="cHead">User Info Code</h1>
+          <code>
+            module.exports = [{<br>
+  name: "userinfo",<br>
+  aliases: ["ui", "whois"],<br>
+  code:`
+$title[$userName[$mentioned[1;true]]]<br>
+$description[$if[$userCustomStatus[$mentioned[1;true];$guildID;state]!=none;$userCustomStatus[$mentioned[1;true];$guildID;state];user has no status]]<br>
+$addField[Avatar;[Click here]($userAvatar[$mentioned[1;true]]);true]<br>
+$addField[Total Roles;$userRolesCount[$mentioned[1;true];$guildID];true]<br>
+$addField[Joined Server;&lt;t:$truncate[$math[$memberJoinedDate[$mentioned[1;true];$guildID]/1000]]:D&gt;;true]
+$addField[Account Created;&lt;t:$truncate[$math[$creationDate[$mentioned[1;true];ms]/1000]]:D&gt;;true]<br>
+$addField[Names;<@$mentioned[1;true]>, $userTag[$mentioned[1;true]]]<br>
+$thumbnail[$userAvatar[$mentioned[1;true]]]<br>
+$color[0987CF]<br>
+$footer[ID ~ $mentioned[1;true];$userAvatar[$mentioned[1;true]]]<br>
+$onlyIf[$isBot[$mentioned[1]]==fale;you can't see bot's info]`<br>
+}]<br>
+          </code>
       </div>
     </section>
       <section>
