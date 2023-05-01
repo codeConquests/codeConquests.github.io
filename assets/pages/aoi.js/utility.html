@@ -43,7 +43,7 @@
         <dl>
           <dt id="totalCodes"></dt>
           <dd><a href="#serverinfoCode">Server Info Code</a></dd>
-           <dd><a href="#userinfoCode">User Info Code</a></dd>
+          <dd><a href="#userinfoCode">User Info Code</a></dd>
           <div class="codeTip">Click on code names to redirect.</div>
         </dl>
       </div>
@@ -52,7 +52,7 @@
       <div class="cContainer">
     <div>
       <h1 id="cHead">Server Info Code</h1>
-     <code id="serverinfoCode">module.exports =  [{<br>
+  <code id="serverinfoCode">module.exports =  [{<br>
   name: "serverinfo",<br>
   aliases: ["server info", "server", "si"],<br>
   code: `
@@ -71,10 +71,13 @@ $addField[Role Count;$numberSeparator[$roleCount];true]<br>
 $addField[Members Status;:green_circle: $numberSeparator[$membersCount[$guildID;online;false]]<br>  :black_circle: $numberSeparator[$membersCount[$guildID;offline;false]];true]<br>
 $addField[Owner;<@$ownerID> ($userTag[$ownerID])
 **ID -** $ownerID;true]`<br>
+$onlyIf[$isBot[$mentioned[1]]==fale;you can't see bot's info]<br>
 }]</code>
+<br>
+<br>
+<center><button id="copyServerinfoCodeBtn" data-clipboard-target="#serverinfoCode">Copy Code</button></center>
         </div>
-         <br>
-         <br>
+        <br>
         <div>
           <h1 id="cHead">User Info Code</h1>
           <code id="userinfoCode">
@@ -93,8 +96,13 @@ $thumbnail[$userAvatar[$mentioned[1;true]]]<br>
 $color[0987CF]<br>
 $footer[ID ~ $mentioned[1;true];$userAvatar[$mentioned[1;true]]]<br>
 $onlyIf[$isBot[$mentioned[1]]==fale;you can't see bot's info]`<br>
-}]<br>
-          </code>
+}]<br>">
+       
+            </code>
+          <br>
+          <br>
+<center><button id="copyUserinfoCodeBtn" data-clipboard-target="#userinfoCode">Copy Code</button></center>
+        </div>
       </div>
     </section>
       <section>
